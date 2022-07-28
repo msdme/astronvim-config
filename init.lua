@@ -32,11 +32,17 @@ local config = {
       return highlights
     end,
   },
+  --header 
+  header = {
+    "Hello, Masdi"
+  },
 
   -- set vim options here (vim.<first_key>.<second_key> =  value)
   options = {
     opt = {
       relativenumber = true, -- sets vim.opt.relativenumber
+      shiftwidth = 4, -- Number of space inserted for indentation
+      tabstop = 4, -- Number of space in a tab
     },
     g = {
       mapleader = " ", -- sets vim.g.mapleader
@@ -219,6 +225,8 @@ local config = {
     n = {
       -- second key is the lefthand side of the map
       ["<C-s>"] = { ":w!<cr>", desc = "Save File" },
+      ["<C-p>"] = { ":Telescope fd<cr>", desc = "Telescope Find In Directory" },
+      ["<C-f>"] = { ":Telescope live_grep<cr>", desc = "Telescope Live Grep" },
     },
     t = {
       -- setting a mapping to false will disable it
