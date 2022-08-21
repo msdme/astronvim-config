@@ -18,7 +18,9 @@ local config = {
   },
 
   -- Set colorscheme
-  colorscheme = "default_theme",
+  -- colorscheme = "default_theme",
+  -- colorscheme = "catppuccin",
+  colorscheme = "molokai",
 
   -- Override highlight groups in any theme
   highlights = {
@@ -89,8 +91,12 @@ local config = {
     init = {
       -- You can disable default plugins as follows:
       -- ["goolord/alpha-nvim"] = { disable = true },
-
+      { "https://github.com/preservim/tagbar" },
+			{ "catppuccin/nvim" },
+			{ "tomasr/molokai" },
       -- You can also add new plugins here as well:
+      { "https://github.com/junegunn/limelight.vim" },
+      { "https://github.com/vim-syntastic/syntastic" }
       -- { "andweeb/presence.nvim" },
       -- {
       --   "ray-x/lsp_signature.nvim",
@@ -227,6 +233,7 @@ local config = {
       ["<C-s>"] = { ":w!<cr>", desc = "Save File" },
       ["<C-p>"] = { ":Telescope fd<cr>", desc = "Telescope Find In Directory" },
       ["<C-f>"] = { ":Telescope live_grep<cr>", desc = "Telescope Live Grep" },
+      ["<F8>"] = { ":TagbarToggle<CR>", desc = "TagBar Toggle" },
     },
     t = {
       -- setting a mapping to false will disable it
